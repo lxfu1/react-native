@@ -8,6 +8,7 @@ import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-ta
 import Technology from './subPage/technology'
 import NesList from './subPage/list'
 import Team from './subPage/team'
+import DL from './subPage/dl'
 import {
     Button,
     Platform,
@@ -36,6 +37,7 @@ class news extends Component {
                 <Team tabLabel='专家团队' />
                 <NesList tabLabel='公司动态' />
                 <Technology tabLabel='技术产品' />
+                <DL tabLabel='前端大佬' />
             </ScrollableTabView>
         );
     }

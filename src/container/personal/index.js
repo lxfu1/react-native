@@ -5,6 +5,8 @@
  */
 import React, { Component } from 'react';
 import LinearGradient from 'react-native-linear-gradient'
+import Icon from "react-native-vector-icons/Ionicons"
+
 import {
     Button,
     Platform,
@@ -42,29 +44,29 @@ class Personal extends Component {
                 </LinearGradient>
                 <View style={styles.gridBox}>
                     <View style={styles.CGrid}>
-                        <Image style={styles.PIcon} source={require('./images/pt.png')} />
+                        <Image style={styles.PIcon} source={require('./images/q1.png')} />
                         <Text style={styles.label}>我的动态</Text>
                     </View>
                     <View style={styles.CGrid}>
-                        <Image style={styles.PIcon} source={require('./images/pt.png')} />
+                        <Image style={styles.PIcon} source={require('./images/q2.png')} />
                         <Text style={styles.label}>谁看过我</Text>
                     </View>
                     <View style={[styles.CGrid, {borderRightWidth: 0}]}>
-                        <Image style={styles.PIcon} source={require('./images/pt.png')} />
+                        <Image style={styles.PIcon} source={require('./images/q3.png')} />
                         <Text style={styles.label}>隐私</Text>
                     </View>
                 </View>
                 <View style={styles.gridBox}>
                     <View style={styles.CGrid}>
-                        <Image style={styles.PIcon} source={require('./images/pt.png')} />
+                        <Image style={styles.PIcon} source={require('./images/q4.png')} />
                         <Text style={styles.label}>喜欢</Text>
                     </View>
                     <View style={styles.CGrid}>
-                        <Image style={styles.PIcon} source={require('./images/pt.png')} />
+                        <Image style={styles.PIcon} source={require('./images/q5.png')} />
                         <Text style={styles.label}>我的消息</Text>
                     </View>
                     <View style={[styles.CGrid, {borderRightWidth: 0}]}>
-                        <Image style={styles.PIcon} source={require('./images/pt.png')} />
+                        <Image style={styles.PIcon} source={require('./images/q6.png')} />
                         <Text style={styles.label}>设置</Text>
                     </View>
                 </View>

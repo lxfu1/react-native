@@ -6,7 +6,6 @@
 import React, { Component } from 'react';
 import Swiper from 'react-native-swiper'
 import NetUitl from '../../utils/NetUitl'
-console.log(NetUitl)
 import {
     Button,
     Platform,
@@ -17,7 +16,9 @@ import {
     TouchableHighlight,
     TouchableNativeFeedback,
     Image,
-    Dimensions
+    Dimensions,
+    Alert,
+    ToastAndroid
 } from 'react-native';
 
 class Home extends Component {
@@ -51,7 +52,8 @@ class Home extends Component {
                         refresh: false,
                         more: false
                     })
-                    alert('没有更多数据了！');
+                    ToastAndroid.show('没有更多数据了！',ToastAndroid.LONG);
+                    //Alert.alert('提示','数据是有限的~！')
                 }
             })
         }
@@ -65,8 +67,8 @@ class Home extends Component {
             },()=>{
                 this.getList(this.state.page)
             })
-            console.log(this.state.page)
-
+        }else{
+            ToastAndroid.show('真没了，别刷了！',ToastAndroid.SHORT);
         }
     }
 
@@ -88,6 +90,7 @@ class Home extends Component {
                     <Swiper
                         style={styles.swiper}
                         height={150}
+                        autoplayTimeout = {3}
                         horizontal={true}
                         paginationStyle={{bottom: 10}}
                         autoplay = {true}
@@ -99,19 +102,19 @@ class Home extends Component {
                 </View>
                 <View style={styles.BContainer}>
                     <View style={styles.common}>
-                        <Image style={styles.bIcon} source={require('./images/ic.jpg')} />
+                        <Image style={styles.bIcon} source={require('./images/q1.png')} />
                         <Text style={styles.bText}>报销</Text>
                     </View>
                     <View style={styles.common}>
-                        <Image style={styles.bIcon} source={require('./images/ic.jpg')} />
+                        <Image style={styles.bIcon} source={require('./images/q2.png')} />
                         <Text style={styles.bText}>审批</Text>
                     </View>
                     <View style={styles.common}>
-                        <Image style={styles.bIcon} source={require('./images/ic.jpg')} />
+                        <Image style={styles.bIcon} source={require('./images/q3.png')} />
                         <Text style={styles.bText}>出勤人数</Text>
                     </View>
                     <View style={styles.common}>
-                        <Image style={styles.bIcon} source={require('./images/ic.jpg')} />
+                        <Image style={styles.bIcon} source={require('./images/q4.png')} />
                         <Text style={styles.bText}>日报</Text>
                     </View>
                 </View>
@@ -183,6 +186,7 @@ const styles = StyleSheet.create({
     bIcon: {
         width: 40,
         height: 40,
+        marginBottom: 5
     },
     bText: {
         textAlign: 'center',

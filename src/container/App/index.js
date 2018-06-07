@@ -39,9 +39,9 @@ class HomePage extends Component {
                         selected={this.state.selectedTab==='popular'}
                         title="主页"
                         selectedTitleStyle={{color:'#63B8FF'}}
-                        renderIcon={()=><Image style={styles.icon} source={require('./images/ns.png')} />}
+                        renderIcon={()=><Image style={styles.icon} source={require('./images/icon_zhuye.png')} />}
                         renderSelectedIcon={() =>
-                        <Image style={[styles.icon,{tintColor:'#63B8FF'}]} source={require('./images/sd.png')}/>}
+                        <Image style={[styles.icon,{tintColor:'#63B8FF'}]} source={require('./images/icon_zhuye_press.png')}/>}
                         onPress={()=>this.setState({selectedTab:'popular'})}
                     >
                         {/*选项卡对应的页面*/}
@@ -52,9 +52,9 @@ class HomePage extends Component {
                         selected={this.state.selectedTab==='trending'}
                         title="我们"
                         selectedTitleStyle={{color:'#63B8FF'}}
-                        renderIcon={()=><Image style={styles.icon} source={require('./images/ns.png')} />}
+                        renderIcon={()=><Image style={styles.icon} source={require('./images/icon_women.png')} />}
                         renderSelectedIcon={() =>
-                        <Image style={[styles.icon,{tintColor:'#63B8FF'}]} source={require('./images/sd.png')}/>}
+                        <Image style={[styles.icon,{tintColor:'#63B8FF'}]} source={require('./images/icon_women_press.png')}/>}
                         onPress={()=>this.setState({selectedTab:'trending'})}
                     >
                         <News navigation={this.props.navigation} />
@@ -64,9 +64,9 @@ class HomePage extends Component {
                         selected={this.state.selectedTab==='my'}
                         title="个人主页"
                         selectedTitleStyle={{color:'#63B8FF'}}
-                        renderIcon={()=><Image style={styles.icon} source={require('./images/ns.png')} />}
+                        renderIcon={()=><Image style={styles.icon} source={require('./images/icon_gerenzhuye.png')} />}
                         renderSelectedIcon={() =>
-                        <Image style={[styles.icon,{tintColor:'#63B8FF'}]} source={require('./images/sd.png')}/>}
+                        <Image style={[styles.icon,{tintColor:'#63B8FF'}]} source={require('./images/icon_gerenzhuye_press.png')}/>}
                         onPress={()=>this.setState({selectedTab:'my'})}
                     >
                        <Personal navigation={this.props.navigation} />
